@@ -1,0 +1,10 @@
+name: GlowLedonpi
+on: workflow_dispatch
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Get code
+        uses: actions/checkout@v2
+      - name: Run script
+        run: python GlowLed.py
